@@ -1,0 +1,97 @@
+.builder-plan-top-div{
+    margin:8% 15%;
+    
+}
+.builder-plan-header{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+.builder-plan-header h1{
+    padding-bottom:25px;
+}
+.builder-plan-header2{
+    display:flex;
+    padding:12px 0px;
+    border:1px solid gainsboro;
+    width:100%;
+    justify-content: center;
+    border-radius: 10px;
+    margin-bottom:20px;
+}
+.builder-plan-header2 b{
+    margin:0px 5px
+}
+.builder-plan-cards-div{
+    display:flex;
+}
+.card-div{
+    width:33%;
+    margin:0px 10px;
+    border:1px solid gainsboro;
+    border-radius: 10px;
+    padding: 22px 16px;
+}
+.card-price1{
+    text-decoration: line-through;
+    color:gray;
+    margin-right:12px;
+}
+.card-price2{
+    color:white;
+    background: #fb506e;
+    padding:8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+}
+.builder-plan-top-div button{
+    background:#583BB6;
+    border-style: none;
+    padding:10px 40%;
+    color:white;
+    border-radius: 50px;
+    margin:20px 0px
+}
+/* #################SEE ALL FEATURES SECTION ########### */
+.see-features-btn{
+    color:#583BB6;
+    text-align: center;
+    margin:40px;
+    font-weight:700
+}
+.see-features-btn:hover{
+    cursor:pointer;
+}
+/* #################SEE ALL FEATURES SECTION END ########### */
+.price-wizard-text{
+    color:#583BB6;
+    
+}
+.price-wizard-text:hover{
+    cursor:pointer
+}
+/* ######## ZYRO SUCESS STORIES ##### */
+.papers-div{
+    display:flex;
+    justify-content: space-evenly;
+    width:80%;
+    padding-bottom:'20px'
+}
+.paper-image-div{
+    width:60px;
+}
+.paper-image-div img{
+    width:100%
+}
+/* ######## ZYRO SUCESS STORIES END ##### */
+.sect3-div button{
+    background:#fb506e;
+    color:white;
+    border-style:none;
+    padding:20px 60px;
+    border-radius:50px;
+}
+.sect4-div{
+    padding:60px 0px 60px 80px
+}

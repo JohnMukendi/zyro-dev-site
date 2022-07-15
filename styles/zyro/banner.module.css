@@ -1,0 +1,129 @@
+.banner{
+    background: linear-gradient(180deg, #f5536f 0%, #fb506e 100%);;
+    color:white;
+    font-size: 14px;
+    padding:0px 24px;
+}
+.nav-bar{
+    display:flex;
+    width:100%;
+    margin-bottom: 8%;
+    padding:12px 0px;
+    position: sticky;
+    top:0px;
+}
+.logo{
+    width:13%;
+    display:flex;
+    align-items:center;
+    padding-left:0px;
+}
+
+.nav-links-left{
+    display:flex;
+    width:57%;
+    padding-right:15%;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links-right{
+    display:flex;
+    width:30%;
+    align-items: center;
+    justify-content: space-between;
+    padding-right:5%;
+}
+.nav-links-right button{
+    color: white;
+    border-radius: 20px;
+    border:1px solid white;
+    font-size:16px;
+    font-family: Verdana;
+    background:transparent;
+    letter-spacing: 1px;
+    width:48%;
+    padding:8px 0px;
+}
+.nav-tab {
+    cursor: pointer;
+    padding:12px 4px;
+}
+.tab1{
+    
+}
+/* ### BANNER SECTION ### */
+.banner-top-div{
+    display:flex;
+    align-items: center;
+}
+.banner-top-div > div{
+    width:50%;
+}
+
+.banner-top-div-right{
+    
+}
+.banner-h1{
+    font-size:22px;
+    font-weight: lighter;
+}
+.timer-heading{
+    width: 58%;
+    padding:40px 0px;
+}
+.timer-div{
+    padding-bottom: 40px;
+}
+.timer-div span{
+    padding:12px;
+    font-size: 22px;
+    font-weight: 500;
+    margin:4px;
+    background: #ff718b ;
+    border-radius: 10px;
+}
+.banner-btn{
+    border-radius: 50px;
+    font-size:16px;
+    font-family: Verdana;
+    background:#583BB6;
+    letter-spacing: 1px;
+    width:33%;
+    padding:16px 0px;
+    COLOR:white;
+    border-style: none;
+}
+.banner-msg{
+    padding:20px 5px;
+}
+.banner-bottom{
+    padding:40px 0px;
+}
+.bottom-banner-div{
+    justify-content: space-between;
+}
+.bottom-banner-div > div{
+    background:white;
+    border-radius: 10px;
+    padding:12px 0px;
+    color:black;
+    width:33%;
+    margin: 0px -2%;
+    display: flex;
+    align-items: center;
+     
+}
+.bottom-banner-icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:8px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    font-weight: 500;
+    margin:4px 12px;
+    background:#d7ccff;
+    color:#583BB6;
+    border-radius: 10px;
+}
