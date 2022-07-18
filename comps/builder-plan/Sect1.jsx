@@ -5,7 +5,7 @@ import {cards} from './cards'
 import DoneSharpIcon from '@mui/icons-material/DoneSharp';
 
 const Sect1 = () => {
-    console.log('CARDS',cards)
+    //console.log('CARDS',cards)
     return (
     <> 
     <Box className={styles['builder-plan-cards-div']}>

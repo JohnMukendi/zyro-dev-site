@@ -1,103 +1,71 @@
-// import React from 'react'
-// import { useState, useEffect } from 'react'
-// import { getRemainingTimeUntilMsTimestamp } from './countdownUtils'
+import {useState,useEffect} from 'react'
+const Timer = () =>{
+  
 
+    const [day,setDays] = useState(0)
+    const [hours,setHours] = useState(0)
+    const [minutes,setMinutes] = useState(0)
+    const [seconds,setSeconds] = useState(0)
+    //######################################
+    const [dayDigit,setDayDigit] = useState('')
+    const [hourDigit,setHourDigit] = useState('')
+    const [minuteDigit,setMinuteDigit] = useState('')
+    const [secondDigit,setSecondDigit] = useState('')
+    //adding 0 to the <span> element if any of the times are less than 10
+   
+    
 
+    useEffect(() =>{
 
+        const target = new Date("07/18/2022 16:00:00")
 
-// const cover = {
-//   // border: "1px solid red",
-//   // height: "200px",
-//   display: "flex",
-//   alignItems: "center",
-//   justifyContent: "flex-start",
-//   zIndex: "10"
-// }
-// const span = {
-//   margin: "0 5px"
-// }
-// const timeChar = {
-//   width: "2 ch",
-//   color: "#f4f4f4",
-//   fontSize: "22px"
-// }
+        const intervalFunc =  setInterval( () =>{
+            
+            const present = new Date();
+            const difference = target.getTime() - present.getTime();
+           
+            //setting the differences...
+            const dayDiff = Math.floor(difference / (1000 * 60 *60 * 24));
+            setDays(dayDiff);
 
+            const hourDiff = Math.floor(
+                difference % (1000 * 60 * 60* 24 ) / (1000 * 60 * 60 )
+            )
+            setHours(hourDiff);
 
+            const minuteDiff = Math.floor(
+                difference % (1000 * 60 * 60 ) / (1000 * 60)
+            )
+            setMinutes(minuteDiff);
 
-// const defaultRemainingTime = {
-//   seconds: "00",
-//   minutes: "00",
-//   hours: "00",
-//   days: "00",
-// }
+            const secondDiff = Math.floor(
+                (difference % ((1000 * 60)) / 1000)
+            )
+            setSeconds(secondDiff)   
+        },1000)
 
-// const Timer = ({ CountdownTimestampMs }) => {
-//   const [remainingTime, setRemainingTime] = useState(defaultRemainingTime)
+        //return clearInterval(intervalFunc)
+    },[])
 
-//   useEffect(() => {
-//     const intervalId = setInterval(() => {
-//       updateRemainingTime(CountdownTimestampMs)
-//     }, 1000)
-//     return () => clearInterval(intervalId)
-//   }, [])
-
-//   function updateRemainingTime(countdown) {
-//     setRemainingTime(getRemainingTimeUntilMsTimestamp(countdown))
-//   }
-
-
-
-
-//   return (
-//     <div style={cover}>
-//       <span style={span}>
-
-//         <h2 style={timeChar}>
-//           {remainingTime.days}
-
-//         </h2>
-
-
-//       </span>
-//       <span style={span}>
-//         <h2 style={{ color: "yellow", margin: "0",fontSize:"20px" }}>D</h2>
-//       </span>
-
-//       <span style={span}>
-//         <h2 style={timeChar}>
-//           {remainingTime.hours}
-
-//         </h2>
-
-//       </span>
-//       <span style={span}>
-//         <h2 style={{ color: "yellow", margin: "0",fontSize:"20px" }}>H</h2>
-//       </span>
-
-//       <span style={span}>
-//         <h2 style={timeChar}>
-//           {remainingTime.minutes}
-
-//         </h2>
-
-//       </span>
-//       <span style={span}>
-//         <h2 style={{ color: "yellow", margin: "0",fontSize:"20px" }}>M</h2>
-//       </span>
-
-//       <span style={span}>
-//         <h2 style={timeChar}>
-//           {remainingTime.seconds}
-
-//         </h2>
-//       </span>
-//       <span style={span}>
-//         <h2 style={{ color: "yellow", margin: "0",fontSize:"20px" }}>S</h2>
-//       </span>
-
-
-//     </div>
-//   )
-// }
-
-// export default Timer
+    return (
+        <>
+        <span>
+            {dayDigit}
+            {day}
+        </span>:
+        <span>
+            {hourDigit}
+            {hours}
+        </span>:
+        <span>
+            {minuteDigit}
+            {minutes}
+        </span>:
+        <span>
+            {secondDigit}
+            {seconds}
+        </span>
+        </>
+    )
+}
+export default Timer

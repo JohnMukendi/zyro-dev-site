@@ -3,17 +3,24 @@ import Head from 'next/head';
 import {Box,Container,Typography,Button,Toolbar} from '@mui/material';
 import Navbar from './Navbar'
 import LanguageSharpIcon from '@mui/icons-material/LanguageSharp';
-
-//import Timer from './Timer'
+import HeadsetMicIcon from '@mui/icons-material/HeadsetMic';
+import GppGoodIcon from '@mui/icons-material/GppGood';
+import Timer from './Timer'
 
 
 const Banner = () => {
-    return (
-    <>          
-    <div className={styles.banner}>
-        <Navbar/>
+    let navBg = 'linear-gradient(180deg, #f5536f 0%, #fb506e 100%)'
 
-        <Box sx={{padding:'0px'}}>
+    const handleScroll = () =>{
+        alert('yes')
+    }
+    return (
+    <>  
+    <Navbar navBg = {navBg}/>        
+    <div className={styles.banner}>
+        
+        
+        <Box onScroll={handleScroll} sx={{padding:'0px'}}>
             <Box className={styles['banner-top-div']}>
                 <Box className={styles['banner-top-div-left']}>
                 <video 
@@ -38,10 +45,7 @@ const Banner = () => {
                         Build a website and save up to 75% with plans from $2.99/mo. Deal ends in:
                     </Box>
                     <Box className={styles['timer-div']}>
-                        <span>06</span>:
-                        <span>05</span>:
-                        <span>54</span>:
-                        <span>56</span>
+                        <Timer/>
                     </Box>
                     <Box>
                         <button className={styles['banner-btn']}>Start for freee</button>
@@ -59,11 +63,11 @@ const Banner = () => {
                         <Typography>Free domain for one year</Typography>
                     </Box>
                     <Box>
-                        <Box className={styles['bottom-banner-icons']}><i className="fa-solid fa-globe"></i></Box>
+                        <Box className={styles['bottom-banner-icons']}><HeadsetMicIcon/></Box>
                         <Typography>24/7 customer support</Typography>
                     </Box>
                     <Box>
-                        <Box className={styles['bottom-banner-icons']}><i className="fa-solid fa-globe"></i></Box>
+                        <Box className={styles['bottom-banner-icons']}><GppGoodIcon/></Box>
                         <Typography>30-day money-back gurantee</Typography>
                     </Box>
                 </Toolbar>

@@ -4,6 +4,7 @@ import styles from '../styles/zyro/zyrohome.module.css'
 import Head from 'next/head'
 import BuilderPlan from '../comps/builder-plan/Builder-plan'
 import FWC_Section from "../comps/fcw-section/FWC";
+import WebBuilderSect from "../comps/web-builder/web-builder-sect";
 import Footer from '../comps/footer';
 
 const ZyroHome = () => {
@@ -19,6 +20,7 @@ const ZyroHome = () => {
     <Banner/>
     <BuilderPlan/>
     <FWC_Section/>
+    <WebBuilderSect/>
     <Footer/>
     
     </div>

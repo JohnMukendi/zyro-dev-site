@@ -8,7 +8,7 @@ import Sect3 from './Sect3'
 import Sect4 from './Sect4'
 
 const BuilderPlan = () => {
-    console.log('CARDS',cards)
+    
     return (
     <>  
     <Box className={styles['builder-plan-top-div']}>

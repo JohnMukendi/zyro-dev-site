@@ -3,6 +3,10 @@ import {Box,Container,Card,Typography,Button,Toolbar,
 Accordion,Tab,tabs
 } from '@mui/material';
 import styles from '../styles/zyro/footer.module.css'
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+// import TwitterIcon from '@mui/icons-material/Twitter';
+//import YouTubeIcon from '@mui/icons-material/YouTube';
 
 const Footer = () => {
 
@@ -47,7 +51,12 @@ const Footer = () => {
                     website or online store.
                     Get your website online in under 1 hour and use AI tools to brand and grow your business.
                     </Typography>
+                    <Box sx={{display:'flex',padding:'20px 0px'}}>
+                        <FacebookIcon/>
+                        <InstagramIcon/>
+                    </Box>
                 </Box>
+                
                 <Box sx={{display:'flex',width:'65%'}}>
                 {
                     footerLinks.map((footerLink) =>(

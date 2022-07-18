@@ -1,0 +1,27 @@
+.web-builder-div{
+    background:whitesmoke;
+    width:100%;
+    padding:40px 160px
+}
+.accordion{
+    background:whitesmoke;
+    padding:0px 40px;
+    border-style: none;
+    box-shadow: none;
+}
+.accordion-details{
+    background:whitesmoke;
+    padding:0px 40px;
+    border-style: none;
+    box-shadow: none;
+    padding-right:40px;
+}
+.accordion-details p{
+    padding-right:40px;
+    line-height:2;
+}
+.accordion p{
+    font-weight: 700;
+    padding:16px 0px;
+    font-size:20px
+}

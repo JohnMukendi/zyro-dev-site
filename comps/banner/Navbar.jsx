@@ -9,7 +9,7 @@ import {
     Paper,Popper,MenuItem,MenuList,Stack
 } from '@mui/material';
 
-const Navbar = () => {
+const Navbar = ({navBg}) => {
 
     const [hover,setHover] = React.useState('pointer')
     const [anchorEl, setAnchorEl] = React.useState(null);
@@ -22,6 +22,22 @@ const Navbar = () => {
         setAnchorEl(null);
     };
     
+    const [active,setActive] = React.useState(false)
+    const [display,setDisplay] = React.useState('block')
+    
+    React.useEffect(() =>{
+        const changeNavbar = ()=>{
+            console.log(window.scrollY)
+            
+            if(window.scrollY >= 190){
+                setActive(true)
+                setDisplay('none')
+            }else{
+                setActive(false)
+            }
+        }
+        window.addEventListener('scroll',changeNavbar)
+    },[])
     return (
     <>
     <Head>
@@ -30,21 +46,12 @@ const Navbar = () => {
     </Head>
     <div>
       
-      <Menu
-        id="basic-menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'basic-button',
-        }}
-      >
-        <MenuItem onClick={handleClose}>Profile</MenuItem>
-        <MenuItem onClick={handleClose}>My account</MenuItem>
-        <MenuItem onClick={handleClose}>Logout</MenuItem>
-      </Menu>
+      
     </div>
-    <Box component ='nav' className={styles['nav-bar']}>
+    <Box component ='nav'
+     className={active ? [styles['nav-bar'],styles['active']] : styles['nav-bar']}
+     sx={{background:navBg,display:display}} onClick ={() =>setActive(!active)}
+     >
             <Box className={styles['logo']}>
              
              <img  src='/Zyro/logo_1.png'/>
@@ -57,7 +64,7 @@ const Navbar = () => {
                     aria-controls={open ? 'basic-menu' : undefined}
                     aria-haspopup="true"
                     aria-expanded={open ? 'true' : undefined}
-                    onMouseOver={handleClick}
+                
                 >
                     {link.name}<i className={link.icon}></i>
                     <svg alt="" fill='white' width="16px" height="16px" xmlns="http://www.w3.org/2000/svg" className="dropdown__arrow icon sprite-icons" data-v-79805227=""><use href="/_nuxt/3fd51a483de901f9af4f23e2d10a6c7f.svg#i-arrow-down" xlinkHref="/_nuxt/3fd51a483de901f9af4f23e2d10a6c7f.svg#i-arrow-down"></use></svg>
